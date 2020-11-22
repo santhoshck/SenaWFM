@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <H1>Organization View</H1>
+    <div>
+        {% for person in people %}
+            <div class="person">
+                <p>{{ person.person_id }}</p>
+                <a href="{% url 'person_detail' person.id %}">
+                    <h3>{{ person.full_name|capfirst }}</h3>
+                </a>
+                <p>{{ person.supervisor }}</p>
+                <p>{{ person.org_unit }}</p>
+                <p class="hidden">{{ person.comments }}</p>
+            </div>
+        {% endfor %}
+    </div>
+
+{% endblock %}
