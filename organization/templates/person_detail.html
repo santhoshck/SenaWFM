@@ -7,7 +7,7 @@
     {% if person.supervisor %}
         <p>Supervisor:
             <a href="{% url 'person_detail' person.supervisor.id %}">
-                Supervisor: {{ person.supervisor }}
+                {{ person.supervisor }}
             </a>
         </p>
     {% endif %}
