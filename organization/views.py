@@ -1,8 +1,9 @@
-from django.shortcuts import render
-from django.http import Http404
+from django.shortcuts import render, get_object_or_404
 
 from .models import Person, OrgUnit
 
+#TODO
+#PermissionDeniedView - Check the views documentation
 
 def index(request):
     people = Person.objects.all()
@@ -11,19 +12,19 @@ def index(request):
     })
 
 def person_detail(request, p_id):
-    try:
-        person = Person.objects.get(id=p_id)
-    except Person.DoesNotExist:
-        raise Http404('Person Not found')
+    person = get_object_or_404(Person, pk=p_id)
     return render (request, 'person_detail.html', {
         'person': person,
     })
 
 def ou_detail(request, ou_id):
-    try:
-        ou = OrgUnit.objects.get(id=ou_id)
-    except OrgUnit.DoesNotExist:
-        raise Http404('Organization Unit Not found')
+    ou = get_object_or_404(OrgUnit, pk=ou_id)
     return render (request, 'ou_detail.html', {
+        'ou':ou,
+    })
+
+def ou_edit(request, ou_id):
+    ou = get_object_or_404(OrgUnit, pk=ou_id)
+    return render (request, 'ou_edit.html', {
         'ou':ou,
     })

@@ -6,7 +6,7 @@
         {% for person in people %}
             <div class="person">
                 <p>{{ person.person_id }}</p>
-                <a href="{% url 'person_detail' person.id %}">
+                <a href="{% url 'org:person_detail' person.id %}">
                     <h3>{{ person.full_name|capfirst }}</h3>
                 </a>
                 <p>{{ person.supervisor }}</p>

@@ -6,21 +6,29 @@
     <h3>Name: {{ ou.ou_name|capfirst }}</h3>
     {% if ou.manager %}
         <p>OU Manager:
-            <a href="{% url 'person_detail' ou.manager.id %}">
+            <a href="{% url 'org:person_detail' ou.manager.id %}">
                 {{ ou.manager }}
             </a>
         </p>
     {% endif %}
     {% if ou.parent_ou %}
         <p>Parent Org Unit:
-            <a href="{% url 'ou_detail' ou.parent_ou.id %}">
+            <a href="{% url 'org:ou_detail' ou.parent_ou.id %}">
                 {{ ou.parent_ou }}
             </a>
         </p>
     {% endif %}
+
+    {% for person in ou.person_set.all %}
+        <li>{{ person.full_name }}</li>
+    {% endfor %}
+        
     {% if ou.comments %}
         <p>{{ ou.comments }}</p>
     {% endif %}
     <p>Active? : {{ ou.is_active }}</p>
+    <form action="{% url 'org:ou_edit' ou.id %}" method="get">
+        <input type="submit" value="Edit">
+    </form>
 
 {% endblock %}

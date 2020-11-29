@@ -3,17 +3,20 @@
 {% block content %}
 
     <p>Id: {{ person.person_id }}</p>
+
+    {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+
     <h3>Name: {{ person.full_name|capfirst }}</h3>
     {% if person.supervisor %}
         <p>Supervisor:
-            <a href="{% url 'person_detail' person.supervisor.id %}">
+            <a href="{% url 'org:person_detail' person.supervisor.id %}">
                 {{ person.supervisor }}
             </a>
         </p>
     {% endif %}
     {% if person.org_unit %}
         <p>Org Unit:
-            <a href="{% url 'ou_detail' person.org_unit.id %}">
+            <a href="{% url 'org:ou_detail' person.org_unit.id %}">
                 {{ person.org_unit }}
             </a>
         </p>
@@ -23,6 +26,10 @@
     <p>Exit Date: {{ person.exit_date|date:"M d Y" }}</p>
     <p>Mail To: {{ person.email|urlize   }}</p>
     <p>Full Time? {{ person.time_percent }} % </p>
+    <p>Team:</p>
+        {% for team_member in person.person_set.all %}
+            <li>{{ team_member.full_name }}</li>
+        {% endfor %}
     {% if person.comments %}
         <p>{{ person.comments }}</p>
     {% endif %}
