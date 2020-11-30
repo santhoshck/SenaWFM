@@ -19,7 +19,7 @@ from django.urls import path, include
 from organization import views
 
 urlpatterns = [
-    path ('', views.index, name='home'),
+    path('', views.IndexView.as_view(), name='home'),
     path('org/',include('organization.urls')),
     path('admin/', admin.site.urls),
     path('accounts/', include('allauth.urls')),

@@ -4,7 +4,6 @@
 
     <p>Id: {{ person.person_id }}</p>
 
-    {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
 
     <h3>Name: {{ person.full_name|capfirst }}</h3>
     {% if person.supervisor %}

@@ -3,30 +3,10 @@
 {% block content %}
     <form action="{% url 'org:ou_edit' ou.id %}" method="post">
         {% csrf_token %}
-        <p>Id: {{ ou.ou_id }}</p>
-        <h3>Name: {{ ou.ou_name|capfirst }}</h3>
-        <p>OU Manager:
-            {% if ou.manager %}
-                <a href="{% url 'org:person_detail' ou.manager.id %}">
-                    {{ ou.manager }}
-                </a>
-            {% endif %}
-        </p>
-     
-        <p>Parent Org Unit:
-            {% if ou.parent_ou %}
-                <a href="{% url 'org:ou_detail' ou.parent_ou.id %}">
-                    {{ ou.parent_ou }}
-                </a>
-            {% endif %}
-        </p>
-    
-        <p>Comments: {{ ou.comments }}</p>
-    
-        <p>Active? : {{ ou.is_active }}</p>
-    
-        
-        <input type="submit" value="Save">
+        <table>
+            {{ form.as_table }}
+        </table>
+        <input type="submit" value="Submit"/>
     </form>
 
 {% endblock %}
