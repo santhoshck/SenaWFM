@@ -11,8 +11,8 @@ from .forms import OUForm
 
 class IndexView(generic.ListView):
     template_name = 'home.html'
-    model = Person
-    context_object_name ='people' #This is the object_list seen by template
+    model = OrgUnit
+    context_object_name ='ou_list' #This is the object_list seen by template
 
 class PersonDetailView(generic.DetailView):
     model = Person
@@ -25,7 +25,6 @@ class OUDetailView(generic.DetailView):
     context_object_name ='ou'
 
 def ou_edit (request, ou_id):
-    #ou = OrgUnit.objects.get(pk=ou_id)
     ou = get_object_or_404(OrgUnit, pk=ou_id)
     if request.method == 'POST':
         form = OUForm (request.POST, instance=ou)    
@@ -35,3 +34,13 @@ def ou_edit (request, ou_id):
     else:
         form = OUForm(instance=ou)
     return render (request, 'ou_edit.html', {'form':form, 'ou':ou}) 
+
+def ou_create (request):
+    if request.method == 'POST':
+        form = OUForm (request.POST)    
+        if form.is_valid():
+            form.save()
+            return HttpResponseRedirect('/org/')
+    else:
+        form = OUForm()
+    return render (request, 'ou_create.html', {'form':form}) 

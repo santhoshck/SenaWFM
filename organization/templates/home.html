@@ -3,17 +3,22 @@
 {% block content %}
     <H1>Organization View</H1>
     <div>
-        {% for person in people %}
-            <div class="person">
-                <p>{{ person.person_id }}</p>
-                <a href="{% url 'org:person_detail' person.id %}">
-                    <h3>{{ person.full_name|capfirst }}</h3>
-                </a>
-                <p>{{ person.supervisor }}</p>
-                <p>{{ person.org_unit }}</p>
-                <p class="hidden">{{ person.comments }}</p>
-            </div>
-        {% endfor %}
+        <table>
+            <tr>
+                <th>OU Name</td>
+                <th>OU Manager</td>
+                <th>OU Parent</td>
+                </tr>         
+            {% for ou in ou_list %}
+            <tr>
+                <td> {{ ou.ou_name }}
+                    <!-- p class="hidden">{{ person.comments }}</p-->
+                </td>
+                <td>{{ ou.manager }}</td>
+                <td>{{ ou.parent_ou }}   </td>
+            </tr>      
+            {% endfor %}      
+        </table>
     </div>
 
 {% endblock %}

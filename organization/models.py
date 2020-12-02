@@ -32,6 +32,9 @@ class OrgUnit (models.Model):
     comments = models.TextField (null= True, blank=True)
     is_active = models.BooleanField(default=True)
 
+    def getRootOUs (self):
+        return OrgUnit.objects.filter(parent_ou = None)
+            
     def __str__ (self):
         return self.ou_name
     
