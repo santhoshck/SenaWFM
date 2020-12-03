@@ -24,7 +24,10 @@
     {% endfor %}
         
     {% if ou.comments %}
-        <p>{{ ou.comments }}</p>
+        <p>
+            <p/>Comments :<p/>
+            {{ ou.comments }}
+        </p>
     {% endif %}
     <p>Active? : {{ ou.is_active }}</p>
     <form action="{% url 'org:ou_edit' ou.id %}" method="get">

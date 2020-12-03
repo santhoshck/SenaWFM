@@ -30,7 +30,7 @@ def ou_edit (request, ou_id):
         form = OUForm (request.POST, instance=ou)    
         if form.is_valid():
             form.save()
-            return HttpResponseRedirect('/org/')
+            return HttpResponseRedirect('/org/ou/1')
     else:
         form = OUForm(instance=ou)
     return render (request, 'ou_edit.html', {'form':form, 'ou':ou}) 
