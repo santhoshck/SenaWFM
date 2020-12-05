@@ -9,5 +9,10 @@ Web application for Work Force Management
 ## Technologies Used:
 - Python3
 - Django
-- Django-Allauth
+-- Allauth
 - Bootstrap4
+
+### Technologies to be used
+- Docker
+- Kubernetes
+- ReactJS
