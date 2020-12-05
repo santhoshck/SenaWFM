@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en">
   {% load static %}
+  {% load account %}
 
   <head>
     <meta charset="utf-8">
@@ -53,7 +54,7 @@
         <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
       </li>
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">User</a>
+        <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{% user_display user %}</a>
         <div class="dropdown-menu" aria-labelledby="dropdown01">
           <a class="dropdown-item" href="#">Profile</a>
           <a class="dropdown-item" href={% url 'account_logout' %}>Log Out</a>
