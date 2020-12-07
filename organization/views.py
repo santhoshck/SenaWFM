@@ -12,11 +12,7 @@ from .forms import OUForm
 #TODO
 #PermissionDeniedView - Check the views documentation
 
-<<<<<<< HEAD
-class IndexView(generic.ListView):
-=======
 class IndexView(LoginRequiredMixin, generic.ListView):
->>>>>>> feature
     template_name = 'organization/home.html'
     model = OrgUnit
     context_object_name ='ou_list' #This is the object_list seen by template
