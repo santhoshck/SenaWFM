@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <H4>Recent Changes</H4>
+    <div>
+        <table>
+            <thead>
+                <tr>
+                    <th>OU ID</th>
+                    <th>Org Unit</th>
+                    <th>History Date/Time</th>
+                    <th>History Action</th>
+                    <th>History User</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for t in change_history %}
+                <tr>
+                    <td>{{ t.ou_id }}</td>
+                    <td>{{ t.ou_name }}</td>
+                    <td>{{ t.history_date }}</td>
+                    <td>{{ t.get_history_type_display }}</td>
+                    <td>{{ t.history_user }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+{% endblock %}

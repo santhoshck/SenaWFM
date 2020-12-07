@@ -1,5 +1,6 @@
 from django.db import models
 from django.utils.translation import gettext_lazy as _
+from simple_history.models import HistoricalRecords
 
 class Person (models.Model):
     class Sex (models.TextChoices):
@@ -20,6 +21,7 @@ class Person (models.Model):
     sex = models.CharField (max_length=1, choices= Sex.choices, blank= True)
     comments = models.TextField (null= True, blank=True)
     is_active = models.BooleanField(default=True)
+    history = HistoricalRecords()
 
     def __str__ (self):
         return self.full_name    
@@ -31,6 +33,7 @@ class OrgUnit (models.Model):
     parent_ou = models.ForeignKey ('self', on_delete=models.SET_NULL, blank=True, null=True )
     comments = models.TextField (null= True, blank=True)
     is_active = models.BooleanField(default=True)
+    history = HistoricalRecords()
             
     def __str__ (self):
         return self.ou_name
