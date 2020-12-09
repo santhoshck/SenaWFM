@@ -12,6 +12,18 @@ from .forms import OUForm
 #TODO
 #PermissionDeniedView - Check the views documentation
 
+def historical_changes(history):
+    changes = []
+    if history is not None :
+        last = history.first()
+        for all_changes in range(history.count()):
+            new_record, old_record = last, last.prev_record
+            if old_record is not None:
+                delta = new_record.diff_against(old_record)
+                changes.append(delta)
+            last = old_record
+    return changes
+
 class IndexView(LoginRequiredMixin, generic.ListView):
     template_name = 'organization/home.html'
     model = OrgUnit
@@ -26,6 +38,13 @@ class OUDetailView(LoginRequiredMixin, generic.DetailView):
     model = OrgUnit
     template_name = 'organization/ou_detail.html' 
     context_object_name ='ou'
+
+@login_required
+def ou_detail (request, ou_id):
+    ou = get_object_or_404(OrgUnit, pk=ou_id)
+    changes = historical_changes(ou.history)
+    return render (request, 'organization/ou_detail.html', {'ou':ou, 'changes':changes})
+    
 
 @login_required
 def ou_edit (request, ou_id):
