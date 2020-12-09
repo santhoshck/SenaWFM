@@ -34,11 +34,6 @@ class PersonDetailView(LoginRequiredMixin, generic.DetailView):
     template_name = 'organization/person_detail.html'
     context_object_name = 'person'
 
-class OUDetailView(LoginRequiredMixin, generic.DetailView):
-    model = OrgUnit
-    template_name = 'organization/ou_detail.html' 
-    context_object_name ='ou'
-
 @login_required
 def ou_detail (request, ou_id):
     ou = get_object_or_404(OrgUnit, pk=ou_id)
