@@ -6,7 +6,7 @@ from django.views import generic
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
 
-from .models import Person, OrgUnit
+from .models import Employee, OrgUnit
 from .forms import OUForm
 
 #TODO
@@ -29,10 +29,10 @@ class IndexView(LoginRequiredMixin, generic.ListView):
     model = OrgUnit
     context_object_name ='ou_list' #This is the object_list seen by template
 
-class PersonDetailView(LoginRequiredMixin, generic.DetailView):
-    model = Person
-    template_name = 'organization/person_detail.html'
-    context_object_name = 'person'
+class EmployeeDetailView(LoginRequiredMixin, generic.DetailView):
+    model = Employee
+    template_name = 'organization/employee_detail.html'
+    context_object_name = 'employee'
 
 @login_required
 def ou_detail (request, ou_id):
@@ -51,6 +51,7 @@ def ou_edit (request, ou_id):
             return HttpResponseRedirect('/org/ou/'+str(ou_id))
     else:
         form = OUForm(instance=ou)
+        form.helper.form_action = '/org/ou_edit/'
     return render (request, 'organization/ou_edit.html', {'form':form, 'ou':ou}) 
 
 @login_required
@@ -62,4 +63,5 @@ def ou_create (request):
             return HttpResponseRedirect('/org/ou/'+str(ou.id))
     else:
         form = OUForm()
+        form.helper.form_action = '/org/ou_create/'
     return render (request, 'organization/ou_create.html', {'form':form}) 

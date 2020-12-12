@@ -6,7 +6,7 @@
     <h3>Name: {{ ou.ou_name|capfirst }}</h3>
     {% if ou.manager %}
         <p>OU Manager:
-            <a href="{% url 'org:person_detail' ou.manager.id %}">
+            <a href="{% url 'org:employee_detail' ou.manager.id %}">
                 {{ ou.manager }}
             </a>
         </p>
@@ -19,8 +19,8 @@
         </p>
     {% endif %}
 
-    {% for person in ou.person_set.all %}
-        <li>{{ person.full_name }}</li>
+    {% for employee in ou.employee_set.all %}
+        <li>{{ employee.full_name }}</li>
     {% endfor %}
         
     {% if ou.comments %}
