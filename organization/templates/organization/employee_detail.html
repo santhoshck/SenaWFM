@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    <p>Id: {{ employee.employee_id }}</p>
+
+
+    <h3>Name: {{ employee.full_name|capfirst }}</h3>
+    {% if employee.supervisor %}
+        <p>Supervisor:
+            <a href="{% url 'org:employee_detail' employee.supervisor.id %}">
+                {{ employee.supervisor }}
+            </a>
+        </p>
+    {% endif %}
+    {% if employee.org_unit %}
+        <p>Org Unit:
+            <a href="{% url 'org:ou_detail' employee.org_unit.id %}">
+                {{ employee.org_unit }}
+            </a>
+        </p>
+    {% endif %}
+    <p>Sex: {{ employee.sex }}</p>
+    <p>Entry Date: {{ employee.entry_date|date:"M d Y" }}</p>
+    <p>Exit Date: {{ employee.exit_date|date:"M d Y" }}</p>
+    <p>Mail To: {{ employee.email|urlize   }}</p>
+    <p>Full Time? {{ employee.time_percent }} % </p>
+    <p>Team:</p>
+        {% for team_member in employee.employee_set.all %}
+            <li>{{ team_member.full_name }}</li>
+        {% endfor %}
+    {% if employee.comments %}
+        <p>{{ employee.comments }}</p>
+    {% endif %}
+    <p>Active? : {{ employee.is_active }}</p>
+
+{% endblock %}
