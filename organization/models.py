@@ -15,6 +15,11 @@ class Employee (models.Model):
         FEMALE = 'F', _('Female')
         OTHER = 'O', _('Other')
 
+    class EmployeeType (models.TextChoices):
+        PERMANENT = 'P', _('Permanent')
+        TEMPORARY = 'T', _('Temporary')
+        CONTRACT = 'C', _('Contract')
+
     employee_id = models.CharField(max_length=20, unique=True)
     full_name = models.CharField(max_length=50)
     entry_date = models.DateField(help_text='Joining Date')
