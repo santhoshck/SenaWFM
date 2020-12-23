@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <H1>Employees</H1>
+    <div>
+        <table>
+            <tr>
+                <th>Employee ID</td>
+                <th>Name</th>
+                <th>Manager</td>
+                <th>Org Unit</td>
+                </tr>         
+            {% for employee in employee_list %}
+                <tr>
+                    <td> 
+                        <a href = "{% url 'org:employee_detail' employee.id %}">
+                            {{ employee.employee_id }}
+                        </a>
+                    </td>
+                    <td>{{ employee.full_name }}</td>
+                    <td>{{ employee.supervisor }}</td>
+                    <td>{{ employee.org_unit }} </td>
+                </tr>      
+            {% endfor %}      
+        </table>
+    </div>
+
+{% endblock %}
