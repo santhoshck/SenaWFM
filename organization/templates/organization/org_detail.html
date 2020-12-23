@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    <p>Id: {{ organization.org_id }}</p>
+    <h3>Name: {{ organization.org_name|capfirst }}</h3>
+    <p/>
+    <h4>Org Units</h4>
+    {% for ou in organization.orgunit_set.all %}
+        <li>{{ ou }}</li>
+    {% endfor %}
+        
+    {% if organization.comments %}
+        <p>
+            <p/>Comments :<p/>
+            {{ organization.comments }}
+        </p>
+    {% endif %}
+    <p/>
+    <p>Active? : {{ organization.is_active }}</p>
+
+{% endblock %}

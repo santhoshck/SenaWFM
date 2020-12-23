@@ -51,17 +51,17 @@
             <a class="nav-link" href={% url 'home' %}>{% fa5_icon 'home' %} Home<span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Organization</a>
+            <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{user.employee.org.org_name}}</a>
             <div class="dropdown-menu" aria-labelledby="dropdown01">
-              <a class="dropdown-item" href="#">Organization</a>
+              <a class="dropdown-item" href="{% url 'org:org_detail' user.employee.org.id %}">Organization</a>
               <a class="dropdown-item" href={%url 'org:ou_list' %}>Org Units</a>
               <a class="dropdown-item" href={%url 'org:employee_list' %}>Employees</a>
             </div>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{% user_display user %}</a>
+            <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{user.employee}}</a>
             <div class="dropdown-menu" aria-labelledby="dropdown01">
-              <a class="dropdown-item" href="#">Profile</a>
+              <a class="dropdown-item" href="{% url 'org:employee_detail' user.employee.id %}">Profile</a>
               <a class="dropdown-item" href={%url 'account_email' %}>Change Email</a>
               <a class="dropdown-item" href={%url 'account_change_password' %}>Change Password</a>
               <a class="dropdown-item" href={% url 'account_logout' %}>Log Out</a>
