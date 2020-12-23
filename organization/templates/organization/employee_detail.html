@@ -13,6 +13,7 @@
             </a>
         </p>
     {% endif %}
+    <p>Organization: {{ employee.org }}</p>
     {% if employee.org_unit %}
         <p>Org Unit:
             <a href="{% url 'org:ou_detail' employee.org_unit.id %}">
@@ -33,5 +34,46 @@
         <p>{{ employee.comments }}</p>
     {% endif %}
     <p>Active? : {{ employee.is_active }}</p>
+    <p>Org Admin?: {{ employee.is_org_admin }}</p>
+
+    <form action="{% url 'org:employee_edit' employee.id %}" method="get">
+        <input type="submit" value="Edit">
+    </form>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>date/time</th>
+                <th>change made</th>
+                <th>responsible</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for change in changes %}  
+                <tr>
+                    <td>{{ change.new_record.employee_id }}</td>
+                    <td>{{ change.new_record.history_date }}</td>
+                    <td>
+                        {% if change.changed_fields|length > 0 %}
+                            {% for change_by_id in change.changes %}
+                                The field:<b>{{ change_by_id.field|title }}</b> was changed from:
+                                {% if change_by_id.old %}
+                                <b>{{ change_by_id.old }}</b>
+                                    {% else %}
+                                    <b>blank field</b>
+                                {% endif %}
+                                for <b>{{ change_by_id.new }}</b>
+                                <br>
+                            {% endfor %}
+                        {% else %}
+                            There were no changes 
+                        {% endif %}
+                    </td>
+                    <td>{{ change.new_record.history_user }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
 
 {% endblock %}
