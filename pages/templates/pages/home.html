@@ -2,29 +2,57 @@
 
 {% block content %}
     <H4>Recent Changes</H4>
-    <div>
-        <table>
-            <thead>
-                <tr>
-                    <th>OU ID</th>
-                    <th>Org Unit</th>
-                    <th>History Date/Time</th>
-                    <th>History Action</th>
-                    <th>History User</th>
-                </tr>
-            </thead>
-            <tbody>
-                {% for t in change_history %}
-                <tr>
-                    <td>{{ t.ou_id }}</td>
-                    <td>{{ t.ou_name }}</td>
-                    <td>{{ t.history_date }}</td>
-                    <td>{{ t.get_history_type_display }}</td>
-                    <td>{{ t.history_user }}</td>
-                </tr>
-                {% endfor %}
-            </tbody>
-        </table>
+    <div class="row">
+        
+        <div class="col">
+            <table class="table table-striped">
+                <thead class="table-dark">
+                    <tr>
+                        <th>OU ID</th>
+                        <th>Org Unit</th>
+                        <th>History Date/Time</th>
+                        <th>History Action</th>
+                        <th>History User</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for t in ou_changes %}
+                    <tr>
+                        <td>{{ t.ou_id }}</td>
+                        <td>{{ t.ou_name }}</td>
+                        <td>{{ t.history_date }}</td>
+                        <td>{{ t.get_history_type_display }}</td>
+                        <td>{{ t.history_user }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+
+        <div class="col">
+            <table class="table table-striped">
+                <thead class="table-primary">
+                    <tr>
+                        <th>Emp ID</th>
+                        <th>Employee</th>
+                        <th>History Date/Time</th>
+                        <th>History Action</th>
+                        <th>History User</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for t in emp_changes %}
+                    <tr>
+                        <td>{{ t.employee_id }}</td>
+                        <td>{{ t.full_name }}</td>
+                        <td>{{ t.history_date }}</td>
+                        <td>{{ t.get_history_type_display }}</td>
+                        <td>{{ t.history_user }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
     </div>
 
 {% endblock %}
