@@ -20,13 +20,20 @@ class Employee (models.Model):
         FEMALE = 'F', _('Female')
         OTHER = 'O', _('Other')
 
-    class EmployeeType (models.TextChoices):
-        PERMANENT = 'P', _('Permanent')
-        TEMPORARY = 'T', _('Temporary')
-        CONTRACT = 'C', _('Contract')
-
     employee_id = models.CharField(max_length=20, unique=True)
     full_name = models.CharField(max_length=50)
+    category = models.ForeignKey (
+        'OrgDesign',
+        limit_choices_to={'field':'EC'},
+        on_delete=models.PROTECT,
+        null=True
+    )
+    job_grade = models.ForeignKey (
+        'OrgDesign',
+        limit_choices_to={'field':'JG'},
+        on_delete=models.PROTECT,
+        null=True
+    )
     entry_date = models.DateField(help_text='Joining Date')
     exit_date = models.DateField()
     email = models.EmailField (null = True, blank = True)
@@ -109,4 +116,17 @@ class OrgUnit (models.Model):
             
     def __str__ (self):
         return self.ou_name
-    
+
+
+
+class OrgDesign (models.Model):
+    class Field (models.TextChoices):
+        EMP_CATEGORY = 'EC', _('Employee Category')
+        JOB_GRADE = 'JG', _('Job Grade')
+
+    field = models.CharField (max_length=2, choices= Field.choices)
+    value = models.CharField(max_length=50)
+    remarks = models.CharField (max_length=100, null=True, blank=True)
+
+    class Meta:
+        unique_together = [['field','value']]
