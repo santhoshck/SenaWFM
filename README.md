@@ -2,14 +2,16 @@
 Web application for Work Force Management
 
 ## Objectives
+- People Analytics
 - Management of Organization Structure
 - Management of Assignments into Projects and Operations
 - Management of Allocation and Actual Effort
+- Competency Management
+- Recruitment workflows
 
 ## Technologies Used:
 - Python3
 - Django
--- Allauth
 - Bootstrap4
 
 ### Technologies to be used
