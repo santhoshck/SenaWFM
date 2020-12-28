@@ -2,6 +2,9 @@
 
 {% block content %}
     <H1>Organization View</H1>
+    <form action="{% url 'org:ou_create' %}" method="get">
+        <input type="submit" value="Add Org Unit">
+    </form>
     <div>
         <table>
             <tr>
