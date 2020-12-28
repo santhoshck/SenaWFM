@@ -2,6 +2,9 @@
 
 {% block content %}
     <H1>Employees</H1>
+    <form action="{% url 'org:employee_create' %}" method="get">
+        <input type="submit" value="Add Employee">
+    </form>
     <div>
         <table>
             <tr>

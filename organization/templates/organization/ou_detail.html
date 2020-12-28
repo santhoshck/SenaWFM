@@ -4,10 +4,19 @@
 
     <p>Id: {{ ou.ou_id }}</p>
     <h3>Name: {{ ou.ou_name|capfirst }}</h3>
-    {% if ou.manager %}
-        <p>OU Manager:
+    <p>OU Manager:
+        {% if ou.manager %}
             <a href="{% url 'org:employee_detail' ou.manager.id %}">
                 {{ ou.manager }}
+            </a>
+        {% else %}
+            --
+        {% endif %}
+    </p>
+    {% if ou.delegate %}
+        <p>Delegate:
+            <a href="{% url 'org:employee_detail' ou.delegate.id %}">
+                {{ ou.delegate }}
             </a>
         </p>
     {% endif %}
@@ -18,6 +27,8 @@
             </a>
         </p>
     {% endif %}
+
+    <h3>Employees:</h3>
 
     {% for employee in ou.employee_set.all %}
         <li>{{ employee.full_name }}</li>

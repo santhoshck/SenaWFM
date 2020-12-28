@@ -21,6 +21,8 @@
             </a>
         </p>
     {% endif %}
+    <p>Category: {{employee.category}} </p>
+    <p>Job Grade: {{employee.job_grade}} </p>
     <p>Sex: {{ employee.sex }}</p>
     <p>Entry Date: {{ employee.entry_date|date:"M d Y" }}</p>
     <p>Exit Date: {{ employee.exit_date|date:"M d Y" }}</p>
