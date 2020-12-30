@@ -2,6 +2,7 @@ from django.db import models
 from django.conf import settings
 from django.utils.translation import gettext_lazy as _
 from simple_history.models import HistoricalRecords
+from django.contrib.auth import get_user_model
 
 class Organization (models.Model):
     org_id = models.CharField(max_length=10, unique=True )
@@ -74,9 +75,15 @@ class Employee (models.Model):
         blank=True
     )
 
+    def save(self, *args, **kwargs):
+        if not self.user:
+            if self.email:
+                user1=get_user_model().objects.create_user (self.email,'P@ssw0rd', name=self.full_name)
+                self.user=user1
+        super().save(*args, **kwargs)  # Call the "real" save() method.
+
     def __str__ (self):
         return self.full_name   
-
 
 
 
