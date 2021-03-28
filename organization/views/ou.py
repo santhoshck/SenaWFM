@@ -3,8 +3,9 @@ from django.http import HttpResponseRedirect
 from django.urls import reverse
 from django.views import generic
 
-from django.contrib.auth.decorators import login_required
+from django.contrib.auth.decorators import login_required, user_passes_test
 from django.contrib.auth.mixins import LoginRequiredMixin
+from rules.contrib.views import permission_required, objectgetter
 
 from organization.models import OrgUnit
 from organization.forms import OUForm
@@ -34,7 +35,7 @@ def ou_detail (request, ou_id):
     return render (request, 'organization/ou_detail.html', {'ou':ou, 'changes':changes})
     
 
-@login_required
+@permission_required('organization.change_orgunit', fn=objectgetter(OrgUnit, 'ou_id'))
 def ou_edit (request, ou_id):
     ou = get_object_or_404(OrgUnit, pk=ou_id)
     if request.method == 'POST':

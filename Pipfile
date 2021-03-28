@@ -9,6 +9,7 @@ django-allauth = "*"
 django-crispy-forms = "*"
 django-fontawesome-5 = "*"
 django-simple-history = "*"
+rules = "*"
 
 [dev-packages]
 

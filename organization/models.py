@@ -2,8 +2,17 @@ from django.db import models
 from django.conf import settings
 from django.utils.translation import gettext_lazy as _
 from simple_history.models import HistoricalRecords
+from django.contrib.auth import get_user_model
+import rules
+from rules.contrib.models import RulesModel
 
-class Organization (models.Model):
+class Organization (RulesModel):
+    class Meta:
+        rules_permissions = {
+            "add": rules.is_staff,
+            "read": rules.is_authenticated,
+            "change": rules.is_staff,
+        }
     org_id = models.CharField(max_length=10, unique=True )
     org_name = models.CharField (max_length=50)
     #history = HistoricalRecords()
@@ -14,7 +23,11 @@ class Organization (models.Model):
         return self.org_id+ ":" +self.org_name  
 
 
-class Employee (models.Model):
+class Employee (RulesModel):
+    class Meta:
+        rules_permissions = {
+            "read": rules.is_authenticated,
+        }
     class Sex (models.TextChoices):
         MALE = 'M', _('Male')
         FEMALE = 'F', _('Female')
@@ -74,13 +87,23 @@ class Employee (models.Model):
         blank=True
     )
 
+    def save(self, *args, **kwargs):
+        if not self.user:
+            if self.email:
+                user1=get_user_model().objects.create_user (self.email,'P@ssw0rd', name=self.full_name)
+                self.user=user1
+        super().save(*args, **kwargs)  # Call the "real" save() method.
+
     def __str__ (self):
         return self.full_name   
 
 
 
-
-class OrgUnit (models.Model):
+class OrgUnit (RulesModel):
+    class Meta:
+        rules_permissions = {
+            "read": rules.is_authenticated,
+        }
     ou_id = models.CharField(max_length=20, unique=True)
     ou_name = models.CharField (max_length=50)
     manager = models.ForeignKey(
@@ -109,6 +132,18 @@ class OrgUnit (models.Model):
     comments = models.TextField (blank=True,null=True)
     is_active = models.BooleanField(default=True)
     history = HistoricalRecords()
+
+    def is_ou_manager(self, u):
+        if not u or not u.employee:
+            return False
+        ou = self
+        while ou:
+            if u.employee == ou.manager or u.employee == ou.delegate:
+                return True
+            if not ou.parent_ou or ou.parent_ou == ou:
+                return False
+            ou = ou.parent_ou 
+        return False
             
     def __str__ (self):
         return self.ou_name
