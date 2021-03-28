@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     'crispy_forms',
     'fontawesome_5',
     'simple_history',
+    'rules.apps.AutodiscoverRulesConfig',
 ]
 
 MIDDLEWARE = [
@@ -117,6 +118,7 @@ AUTH_USER_MODEL = 'users.User'
 AUTHENTICATION_BACKENDS = (
     'django.contrib.auth.backends.ModelBackend', # existing backend
     'allauth.account.auth_backends.AuthenticationBackend',
+    'rules.permissions.ObjectPermissionBackend',
 )
 
 SITE_ID = 1

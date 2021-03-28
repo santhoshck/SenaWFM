@@ -1,5 +1,7 @@
 {% extends "base.html" %}
 
+{% load rules %}
+
 {% block content %}
 
     <p>Id: {{ ou.ou_id }}</p>
@@ -31,7 +33,11 @@
     <h3>Employees:</h3>
 
     {% for employee in ou.employee_set.all %}
-        <li>{{ employee.full_name }}</li>
+        <li>
+            <a href="{% url 'org:employee_detail' employee.id %}">
+                {{ employee.full_name }}
+            </a>
+        </li>
     {% endfor %}
         
     {% if ou.comments %}
@@ -41,9 +47,12 @@
         </p>
     {% endif %}
     <p>Active? : {{ ou.is_active }}</p>
-    <form action="{% url 'org:ou_edit' ou.id %}" method="get">
-        <input type="submit" value="Edit">
-    </form>
+    {% has_perm 'organization.change_orgunit' user ou as can_edit_ou %}
+    {% if can_edit_ou %}
+        <form action="{% url 'org:ou_edit' ou.id %}" method="get">
+            <input type="submit" value="Edit">
+        </form>
+    {% endif %}
 
     <table class="table">
         <thead>
