@@ -10,6 +10,8 @@ django-crispy-forms = "*"
 django-fontawesome-5 = "*"
 django-simple-history = "*"
 rules = "*"
+djangorestframework = "*"
+django-cors-headers = "*"
 
 [dev-packages]
 
