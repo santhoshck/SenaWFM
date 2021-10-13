@@ -19,15 +19,14 @@ from django.urls import path, include
 from rest_framework import routers
 
 from django.views.generic import TemplateView
-from organization import views as orgviews
+from organization.urls import router as OrganizationRouter
 from pages import views
 
 router = routers.DefaultRouter()
-router.register(r'orgunits',orgviews.OrgUnitView, 'ou')
+router.registry.extend(OrganizationRouter.registry)
 
 urlpatterns = [
     path('', views.home_view, name='home'),
-    path('org/',include('organization.urls')),
     path('admin/', admin.site.urls),
     path('accounts/', include('allauth.urls')),
     path('about/',TemplateView.as_view(template_name='pages/about.html'),name='about'),

@@ -1,6 +1,7 @@
-from django.views.generic import DetailView
 from organization.models import Organization
+from rest_framework import viewsets
+from organization.serializers import OrganizationSerializer
 
-class OrganizationDetailView (DetailView):
-    model = Organization
-    template_name = 'organization/org_detail.html'
+class OrganizationViewSet (viewsets.ModelViewSet):  
+    serializer_class = OrganizationSerializer   
+    queryset = Organization.objects.all()

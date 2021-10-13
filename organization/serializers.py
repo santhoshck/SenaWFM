@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import OrgUnit, Employee
+from .models import OrgUnit, Employee, Organization
 
 class OrgUnitSerializer(serializers.ModelSerializer):
     class Meta:
@@ -12,3 +12,8 @@ class EmployeeSerializer(serializers.ModelSerializer):
         fields = ('id','employee_id', 'full_name', 'category', 'job_grade', 
             'entry_date', 'exit_date', 'email', 'supervisor', 'org', 'org_unit', 
             'time_percent', 'sex', 'comments', 'is_active', 'is_org_admin', 'history', 'user')
+
+class OrganizationSerializer (serializers.ModelSerializer):
+    class Meta:
+        model = Organization
+        fields = ('org_id', 'org_name', 'comments', 'is_active')
