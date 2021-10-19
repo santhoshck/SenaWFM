@@ -18,6 +18,8 @@ class Organization (RulesModel):
     #history = HistoricalRecords()
     comments = models.TextField (null=True, blank=True)
     is_active = models.BooleanField(default=True)
+    created = models.DateTimeField(auto_now_add=True, editable=False)
+    modified = models.DateTimeField(auto_now=True, editable=False)
 
     def __str__ (self):
         return self.org_id+ ":" +self.org_name  
@@ -58,6 +60,7 @@ class Employee (RulesModel):
     supervisor = models.ForeignKey (
         'self',
         limit_choices_to={'is_active':True},
+        related_name='team',
         on_delete=models.SET_NULL, 
         null=True, 
         blank=True
@@ -71,10 +74,11 @@ class Employee (RulesModel):
     org_unit = models.ForeignKey (
         'OrgUnit',
         limit_choices_to={'is_active':True},
+        related_name='employees',
         on_delete=models.SET_NULL, 
         null = True
     )
-    time_percent = models.IntegerField('100 if Full Time', null=True)
+    hours_per_week = models.IntegerField(default = 40)
     sex = models.CharField (max_length=1, choices= Sex.choices,null=True, blank= True)
     comments = models.TextField (blank=True,null=True)
     is_active = models.BooleanField(default=True)
@@ -86,6 +90,8 @@ class Employee (RulesModel):
         null=True, 
         blank=True
     )
+    created = models.DateTimeField(auto_now_add=True, editable=False)
+    modified = models.DateTimeField(auto_now=True, editable=False)
 
     def save(self, *args, **kwargs):
         if not self.user:
@@ -132,6 +138,8 @@ class OrgUnit (RulesModel):
     comments = models.TextField (blank=True,null=True)
     is_active = models.BooleanField(default=True)
     history = HistoricalRecords()
+    created = models.DateTimeField(auto_now_add=True, editable=False)
+    modified = models.DateTimeField(auto_now=True, editable=False)
 
     def is_ou_manager(self, u):
         if not u or not u.employee:
