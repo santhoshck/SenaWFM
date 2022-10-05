@@ -52,6 +52,7 @@ INSTALLED_APPS = [
     'rules.apps.AutodiscoverRulesConfig',
     'corsheaders',
     'rest_framework',
+    'rest_framework.authtoken',
 ]
 
 MIDDLEWARE = [
@@ -125,8 +126,19 @@ AUTH_USER_MODEL = 'users.User'
 AUTHENTICATION_BACKENDS = (
     'django.contrib.auth.backends.ModelBackend', # existing backend
     'allauth.account.auth_backends.AuthenticationBackend',
-    'rules.permissions.ObjectPermissionBackend',
+    #'rules.permissions.ObjectPermissionBackend',
+
 )
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.BasicAuthentication',
+        'rest_framework.authentication.SessionAuthentication',
+        'rest_framework.authentication.TokenAuthentication',
+    ],
+    'DEFAULT_PERMISSION_CLASSES': [],
+    'TEST_REQUEST_DEFAULT_FORMAT': 'json',
+}
 
 SITE_ID = 1
 

@@ -1,0 +1,17 @@
+[
+{
+    "model": "organization.orgunit",
+    "pk": 1,
+    "fields": {
+        "ou_id": "testOU",
+        "ou_name": "OU Name",
+        "manager": null,
+        "delegate": null,
+        "parent_ou": null,
+        "comments": "",
+        "is_active": true,
+        "created": "2021-10-18T10:34:56.107Z",
+        "modified": "2021-10-18T10:34:56.107Z"
+    }
+}
+]

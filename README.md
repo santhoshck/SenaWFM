@@ -18,3 +18,8 @@ Web application for Work Force Management
 - Docker
 - Kubernetes
 - ReactJS
+
+## Commands to be used
+'pipenv shell' to start the environment
+'manage.py runserver' to start the server
+'manage.py test' to run the tests

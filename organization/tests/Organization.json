@@ -1,0 +1,14 @@
+[
+{
+    "model": "organization.organization",
+    "pk": 1,
+    "fields": {
+        "org_id": "testorg",
+        "org_name": "Org Name",
+        "comments": "",
+        "is_active": true,
+        "created": "2021-10-18T10:34:15.772Z",
+        "modified": "2021-10-18T10:34:15.772Z"
+    }
+}
+]

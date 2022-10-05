@@ -3,16 +3,16 @@ from django.conf import settings
 from django.utils.translation import gettext_lazy as _
 from simple_history.models import HistoricalRecords
 from django.contrib.auth import get_user_model
-import rules
+#import rules
 from rules.contrib.models import RulesModel
 
 class Organization (RulesModel):
-    class Meta:
-        rules_permissions = {
-            "add": rules.is_staff,
-            "read": rules.is_authenticated,
-            "change": rules.is_staff,
-        }
+    #class Meta:
+    #    rules_permissions = {
+    #        "add": rules.is_staff,
+    #        "read": rules.is_authenticated,
+    #        "change": rules.is_staff,
+    #    }
     org_id = models.CharField(max_length=10, unique=True )
     org_name = models.CharField (max_length=50)
     #history = HistoricalRecords()
@@ -26,10 +26,10 @@ class Organization (RulesModel):
 
 
 class Employee (RulesModel):
-    class Meta:
-        rules_permissions = {
-            "read": rules.is_authenticated,
-        }
+    #class Meta:
+    #    rules_permissions = {
+    #        "read": rules.is_authenticated,
+    #    }
     class Sex (models.TextChoices):
         MALE = 'M', _('Male')
         FEMALE = 'F', _('Female')
@@ -87,6 +87,7 @@ class Employee (RulesModel):
     user = models.OneToOneField(
         settings.AUTH_USER_MODEL,
         on_delete=models.SET_NULL,
+        related_name='employee',
         null=True, 
         blank=True
     )
@@ -106,10 +107,10 @@ class Employee (RulesModel):
 
 
 class OrgUnit (RulesModel):
-    class Meta:
-        rules_permissions = {
-            "read": rules.is_authenticated,
-        }
+    #class Meta:
+    #    rules_permissions = {
+    #        "read": rules.is_authenticated,
+    #    }
     ou_id = models.CharField(max_length=20, unique=True)
     ou_name = models.CharField (max_length=50)
     manager = models.ForeignKey(
@@ -132,6 +133,7 @@ class OrgUnit (RulesModel):
         'self', 
         limit_choices_to={'is_active':True},
         on_delete=models.SET_NULL, 
+        related_name='children',
         blank=True, 
         null=True 
     )

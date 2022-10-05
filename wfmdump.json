@@ -1,1 +1,1225 @@
-[{"model": "organization.organization", "pk": 1, "fields": {"org_id": "sena", "org_name": "SenaWFM", "comments": "", "is_active": true, "created": "2021-10-18T10:34:15.772Z", "modified": "2021-10-18T10:34:15.772Z"}}, {"model": "organization.historicalemployee", "pk": 1, "fields": {"id": 1, "employee_id": "SENA001", "full_name": "Santhosh C K", "entry_date": "2021-10-18", "exit_date": null, "email": "santhosh.ck@senawfm.com", "hours_per_week": 20, "sex": null, "comments": "", "is_active": true, "is_org_admin": true, "created": "2021-10-18T10:39:51.926Z", "modified": "2021-10-18T10:39:51.926Z", "category": 1, "job_grade": 4, "supervisor": null, "org": 1, "org_unit": 2, "user": 2, "history_date": "2021-10-18T10:39:51.926Z", "history_change_reason": null, "history_type": "+", "history_user": 1}}, {"model": "organization.historicalemployee", "pk": 2, "fields": {"id": 1, "employee_id": "SENA001", "full_name": "Santhosh C K", "entry_date": "2021-10-18", "exit_date": null, "email": "santhosh.ck@senawfm.com", "hours_per_week": 20, "sex": null, "comments": "", "is_active": true, "is_org_admin": true, "created": "2021-10-18T10:39:51.926Z", "modified": "2021-10-18T10:40:29.933Z", "category": 1, "job_grade": 4, "supervisor": 1, "org": 1, "org_unit": 2, "user": 2, "history_date": "2021-10-18T10:40:29.935Z", "history_change_reason": null, "history_type": "~", "history_user": 1}}, {"model": "organization.historicalemployee", "pk": 3, "fields": {"id": 2, "employee_id": "SENA002", "full_name": "Saurav Santhosh", "entry_date": "2021-10-18", "exit_date": null, "email": null, "hours_per_week": 40, "sex": "M", "comments": "", "is_active": true, "is_org_admin": false, "created": "2021-10-18T10:41:17.280Z", "modified": "2021-10-18T10:41:17.280Z", "category": 1, "job_grade": 3, "supervisor": null, "org": 1, "org_unit": 1, "user": null, "history_date": "2021-10-18T10:41:17.281Z", "history_change_reason": null, "history_type": "+", "history_user": 1}}, {"model": "organization.employee", "pk": 1, "fields": {"employee_id": "SENA001", "full_name": "Santhosh C K", "category": 1, "job_grade": 4, "entry_date": "2021-10-18", "exit_date": null, "email": "santhosh.ck@senawfm.com", "supervisor": 1, "org": 1, "org_unit": 2, "hours_per_week": 20, "sex": null, "comments": "", "is_active": true, "is_org_admin": true, "user": 2, "created": "2021-10-18T10:39:51.926Z", "modified": "2021-10-18T10:40:29.933Z"}}, {"model": "organization.employee", "pk": 2, "fields": {"employee_id": "SENA002", "full_name": "Saurav Santhosh", "category": 1, "job_grade": 3, "entry_date": "2021-10-18", "exit_date": null, "email": null, "supervisor": null, "org": 1, "org_unit": 1, "hours_per_week": 40, "sex": "M", "comments": "", "is_active": true, "is_org_admin": false, "user": null, "created": "2021-10-18T10:41:17.280Z", "modified": "2021-10-18T10:41:17.280Z"}}, {"model": "organization.historicalorgunit", "pk": 1, "fields": {"id": 1, "ou_id": "RnD", "ou_name": "R & D", "comments": "", "is_active": true, "created": "2021-10-18T10:34:56.107Z", "modified": "2021-10-18T10:34:56.107Z", "manager": null, "delegate": null, "parent_ou": null, "history_date": "2021-10-18T10:34:56.108Z", "history_change_reason": null, "history_type": "+", "history_user": 1}}, {"model": "organization.historicalorgunit", "pk": 2, "fields": {"id": 2, "ou_id": "CEO", "ou_name": "CEO", "comments": "", "is_active": true, "created": "2021-10-18T10:35:26.864Z", "modified": "2021-10-18T10:35:26.864Z", "manager": null, "delegate": null, "parent_ou": null, "history_date": "2021-10-18T10:35:26.865Z", "history_change_reason": null, "history_type": "+", "history_user": 1}}, {"model": "organization.orgunit", "pk": 1, "fields": {"ou_id": "RnD", "ou_name": "R & D", "manager": null, "delegate": null, "parent_ou": null, "comments": "", "is_active": true, "created": "2021-10-18T10:34:56.107Z", "modified": "2021-10-18T10:34:56.107Z"}}, {"model": "organization.orgunit", "pk": 2, "fields": {"ou_id": "CEO", "ou_name": "CEO", "manager": null, "delegate": null, "parent_ou": null, "comments": "", "is_active": true, "created": "2021-10-18T10:35:26.864Z", "modified": "2021-10-18T10:35:26.864Z"}}, {"model": "organization.orgdesign", "pk": 1, "fields": {"field": "EC", "value": "Permanent", "remarks": null}}, {"model": "organization.orgdesign", "pk": 2, "fields": {"field": "EC", "value": "Temporary", "remarks": null}}, {"model": "organization.orgdesign", "pk": 3, "fields": {"field": "JG", "value": "JG-1", "remarks": null}}, {"model": "organization.orgdesign", "pk": 4, "fields": {"field": "JG", "value": "JG-2", "remarks": null}}, {"model": "admin.logentry", "pk": 1, "fields": {"action_time": "2021-10-18T10:34:15.773Z", "user": 1, "content_type": 2, "object_id": "1", "object_repr": "sena:SenaWFM", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 2, "fields": {"action_time": "2021-10-18T10:34:56.110Z", "user": 1, "content_type": 3, "object_id": "1", "object_repr": "R & D", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 3, "fields": {"action_time": "2021-10-18T10:35:26.868Z", "user": 1, "content_type": 3, "object_id": "2", "object_repr": "CEO", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 4, "fields": {"action_time": "2021-10-18T10:36:29.607Z", "user": 1, "content_type": 4, "object_id": "1", "object_repr": "Permanent", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 5, "fields": {"action_time": "2021-10-18T10:36:39.401Z", "user": 1, "content_type": 4, "object_id": "2", "object_repr": "Temporary", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 6, "fields": {"action_time": "2021-10-18T10:36:52.464Z", "user": 1, "content_type": 4, "object_id": "3", "object_repr": "JG-1", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 7, "fields": {"action_time": "2021-10-18T10:36:59.411Z", "user": 1, "content_type": 4, "object_id": "4", "object_repr": "JG-2", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 8, "fields": {"action_time": "2021-10-18T10:39:51.928Z", "user": 1, "content_type": 1, "object_id": "1", "object_repr": "Santhosh C K", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 9, "fields": {"action_time": "2021-10-18T10:40:29.938Z", "user": 1, "content_type": 1, "object_id": "1", "object_repr": "Santhosh C K", "action_flag": 2, "change_message": "[{\"changed\": {\"fields\": [\"Supervisor\"]}}]"}}, {"model": "admin.logentry", "pk": 10, "fields": {"action_time": "2021-10-18T10:41:17.285Z", "user": 1, "content_type": 1, "object_id": "2", "object_repr": "Saurav Santhosh", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "auth.permission", "pk": 1, "fields": {"name": "Can add employee", "content_type": 1, "codename": "add_employee"}}, {"model": "auth.permission", "pk": 2, "fields": {"name": "Can change employee", "content_type": 1, "codename": "change_employee"}}, {"model": "auth.permission", "pk": 3, "fields": {"name": "Can delete employee", "content_type": 1, "codename": "delete_employee"}}, {"model": "auth.permission", "pk": 4, "fields": {"name": "Can view employee", "content_type": 1, "codename": "view_employee"}}, {"model": "auth.permission", "pk": 5, "fields": {"name": "Can add organization", "content_type": 2, "codename": "add_organization"}}, {"model": "auth.permission", "pk": 6, "fields": {"name": "Can change organization", "content_type": 2, "codename": "change_organization"}}, {"model": "auth.permission", "pk": 7, "fields": {"name": "Can delete organization", "content_type": 2, "codename": "delete_organization"}}, {"model": "auth.permission", "pk": 8, "fields": {"name": "Can view organization", "content_type": 2, "codename": "view_organization"}}, {"model": "auth.permission", "pk": 9, "fields": {"name": "Can add org unit", "content_type": 3, "codename": "add_orgunit"}}, {"model": "auth.permission", "pk": 10, "fields": {"name": "Can change org unit", "content_type": 3, "codename": "change_orgunit"}}, {"model": "auth.permission", "pk": 11, "fields": {"name": "Can delete org unit", "content_type": 3, "codename": "delete_orgunit"}}, {"model": "auth.permission", "pk": 12, "fields": {"name": "Can view org unit", "content_type": 3, "codename": "view_orgunit"}}, {"model": "auth.permission", "pk": 13, "fields": {"name": "Can add org design", "content_type": 4, "codename": "add_orgdesign"}}, {"model": "auth.permission", "pk": 14, "fields": {"name": "Can change org design", "content_type": 4, "codename": "change_orgdesign"}}, {"model": "auth.permission", "pk": 15, "fields": {"name": "Can delete org design", "content_type": 4, "codename": "delete_orgdesign"}}, {"model": "auth.permission", "pk": 16, "fields": {"name": "Can view org design", "content_type": 4, "codename": "view_orgdesign"}}, {"model": "auth.permission", "pk": 17, "fields": {"name": "Can add historical org unit", "content_type": 5, "codename": "add_historicalorgunit"}}, {"model": "auth.permission", "pk": 18, "fields": {"name": "Can change historical org unit", "content_type": 5, "codename": "change_historicalorgunit"}}, {"model": "auth.permission", "pk": 19, "fields": {"name": "Can delete historical org unit", "content_type": 5, "codename": "delete_historicalorgunit"}}, {"model": "auth.permission", "pk": 20, "fields": {"name": "Can view historical org unit", "content_type": 5, "codename": "view_historicalorgunit"}}, {"model": "auth.permission", "pk": 21, "fields": {"name": "Can add historical employee", "content_type": 6, "codename": "add_historicalemployee"}}, {"model": "auth.permission", "pk": 22, "fields": {"name": "Can change historical employee", "content_type": 6, "codename": "change_historicalemployee"}}, {"model": "auth.permission", "pk": 23, "fields": {"name": "Can delete historical employee", "content_type": 6, "codename": "delete_historicalemployee"}}, {"model": "auth.permission", "pk": 24, "fields": {"name": "Can view historical employee", "content_type": 6, "codename": "view_historicalemployee"}}, {"model": "auth.permission", "pk": 25, "fields": {"name": "Can add log entry", "content_type": 7, "codename": "add_logentry"}}, {"model": "auth.permission", "pk": 26, "fields": {"name": "Can change log entry", "content_type": 7, "codename": "change_logentry"}}, {"model": "auth.permission", "pk": 27, "fields": {"name": "Can delete log entry", "content_type": 7, "codename": "delete_logentry"}}, {"model": "auth.permission", "pk": 28, "fields": {"name": "Can view log entry", "content_type": 7, "codename": "view_logentry"}}, {"model": "auth.permission", "pk": 29, "fields": {"name": "Can add permission", "content_type": 8, "codename": "add_permission"}}, {"model": "auth.permission", "pk": 30, "fields": {"name": "Can change permission", "content_type": 8, "codename": "change_permission"}}, {"model": "auth.permission", "pk": 31, "fields": {"name": "Can delete permission", "content_type": 8, "codename": "delete_permission"}}, {"model": "auth.permission", "pk": 32, "fields": {"name": "Can view permission", "content_type": 8, "codename": "view_permission"}}, {"model": "auth.permission", "pk": 33, "fields": {"name": "Can add group", "content_type": 9, "codename": "add_group"}}, {"model": "auth.permission", "pk": 34, "fields": {"name": "Can change group", "content_type": 9, "codename": "change_group"}}, {"model": "auth.permission", "pk": 35, "fields": {"name": "Can delete group", "content_type": 9, "codename": "delete_group"}}, {"model": "auth.permission", "pk": 36, "fields": {"name": "Can view group", "content_type": 9, "codename": "view_group"}}, {"model": "auth.permission", "pk": 37, "fields": {"name": "Can add content type", "content_type": 10, "codename": "add_contenttype"}}, {"model": "auth.permission", "pk": 38, "fields": {"name": "Can change content type", "content_type": 10, "codename": "change_contenttype"}}, {"model": "auth.permission", "pk": 39, "fields": {"name": "Can delete content type", "content_type": 10, "codename": "delete_contenttype"}}, {"model": "auth.permission", "pk": 40, "fields": {"name": "Can view content type", "content_type": 10, "codename": "view_contenttype"}}, {"model": "auth.permission", "pk": 41, "fields": {"name": "Can add session", "content_type": 11, "codename": "add_session"}}, {"model": "auth.permission", "pk": 42, "fields": {"name": "Can change session", "content_type": 11, "codename": "change_session"}}, {"model": "auth.permission", "pk": 43, "fields": {"name": "Can delete session", "content_type": 11, "codename": "delete_session"}}, {"model": "auth.permission", "pk": 44, "fields": {"name": "Can view session", "content_type": 11, "codename": "view_session"}}, {"model": "auth.permission", "pk": 45, "fields": {"name": "Can add user", "content_type": 12, "codename": "add_user"}}, {"model": "auth.permission", "pk": 46, "fields": {"name": "Can change user", "content_type": 12, "codename": "change_user"}}, {"model": "auth.permission", "pk": 47, "fields": {"name": "Can delete user", "content_type": 12, "codename": "delete_user"}}, {"model": "auth.permission", "pk": 48, "fields": {"name": "Can view user", "content_type": 12, "codename": "view_user"}}, {"model": "auth.permission", "pk": 49, "fields": {"name": "Can add site", "content_type": 13, "codename": "add_site"}}, {"model": "auth.permission", "pk": 50, "fields": {"name": "Can change site", "content_type": 13, "codename": "change_site"}}, {"model": "auth.permission", "pk": 51, "fields": {"name": "Can delete site", "content_type": 13, "codename": "delete_site"}}, {"model": "auth.permission", "pk": 52, "fields": {"name": "Can view site", "content_type": 13, "codename": "view_site"}}, {"model": "auth.permission", "pk": 53, "fields": {"name": "Can add email address", "content_type": 14, "codename": "add_emailaddress"}}, {"model": "auth.permission", "pk": 54, "fields": {"name": "Can change email address", "content_type": 14, "codename": "change_emailaddress"}}, {"model": "auth.permission", "pk": 55, "fields": {"name": "Can delete email address", "content_type": 14, "codename": "delete_emailaddress"}}, {"model": "auth.permission", "pk": 56, "fields": {"name": "Can view email address", "content_type": 14, "codename": "view_emailaddress"}}, {"model": "auth.permission", "pk": 57, "fields": {"name": "Can add email confirmation", "content_type": 15, "codename": "add_emailconfirmation"}}, {"model": "auth.permission", "pk": 58, "fields": {"name": "Can change email confirmation", "content_type": 15, "codename": "change_emailconfirmation"}}, {"model": "auth.permission", "pk": 59, "fields": {"name": "Can delete email confirmation", "content_type": 15, "codename": "delete_emailconfirmation"}}, {"model": "auth.permission", "pk": 60, "fields": {"name": "Can view email confirmation", "content_type": 15, "codename": "view_emailconfirmation"}}, {"model": "auth.permission", "pk": 61, "fields": {"name": "Can add social account", "content_type": 16, "codename": "add_socialaccount"}}, {"model": "auth.permission", "pk": 62, "fields": {"name": "Can change social account", "content_type": 16, "codename": "change_socialaccount"}}, {"model": "auth.permission", "pk": 63, "fields": {"name": "Can delete social account", "content_type": 16, "codename": "delete_socialaccount"}}, {"model": "auth.permission", "pk": 64, "fields": {"name": "Can view social account", "content_type": 16, "codename": "view_socialaccount"}}, {"model": "auth.permission", "pk": 65, "fields": {"name": "Can add social application", "content_type": 17, "codename": "add_socialapp"}}, {"model": "auth.permission", "pk": 66, "fields": {"name": "Can change social application", "content_type": 17, "codename": "change_socialapp"}}, {"model": "auth.permission", "pk": 67, "fields": {"name": "Can delete social application", "content_type": 17, "codename": "delete_socialapp"}}, {"model": "auth.permission", "pk": 68, "fields": {"name": "Can view social application", "content_type": 17, "codename": "view_socialapp"}}, {"model": "auth.permission", "pk": 69, "fields": {"name": "Can add social application token", "content_type": 18, "codename": "add_socialtoken"}}, {"model": "auth.permission", "pk": 70, "fields": {"name": "Can change social application token", "content_type": 18, "codename": "change_socialtoken"}}, {"model": "auth.permission", "pk": 71, "fields": {"name": "Can delete social application token", "content_type": 18, "codename": "delete_socialtoken"}}, {"model": "auth.permission", "pk": 72, "fields": {"name": "Can view social application token", "content_type": 18, "codename": "view_socialtoken"}}, {"model": "contenttypes.contenttype", "pk": 1, "fields": {"app_label": "organization", "model": "employee"}}, {"model": "contenttypes.contenttype", "pk": 2, "fields": {"app_label": "organization", "model": "organization"}}, {"model": "contenttypes.contenttype", "pk": 3, "fields": {"app_label": "organization", "model": "orgunit"}}, {"model": "contenttypes.contenttype", "pk": 4, "fields": {"app_label": "organization", "model": "orgdesign"}}, {"model": "contenttypes.contenttype", "pk": 5, "fields": {"app_label": "organization", "model": "historicalorgunit"}}, {"model": "contenttypes.contenttype", "pk": 6, "fields": {"app_label": "organization", "model": "historicalemployee"}}, {"model": "contenttypes.contenttype", "pk": 7, "fields": {"app_label": "admin", "model": "logentry"}}, {"model": "contenttypes.contenttype", "pk": 8, "fields": {"app_label": "auth", "model": "permission"}}, {"model": "contenttypes.contenttype", "pk": 9, "fields": {"app_label": "auth", "model": "group"}}, {"model": "contenttypes.contenttype", "pk": 10, "fields": {"app_label": "contenttypes", "model": "contenttype"}}, {"model": "contenttypes.contenttype", "pk": 11, "fields": {"app_label": "sessions", "model": "session"}}, {"model": "contenttypes.contenttype", "pk": 12, "fields": {"app_label": "users", "model": "user"}}, {"model": "contenttypes.contenttype", "pk": 13, "fields": {"app_label": "sites", "model": "site"}}, {"model": "contenttypes.contenttype", "pk": 14, "fields": {"app_label": "account", "model": "emailaddress"}}, {"model": "contenttypes.contenttype", "pk": 15, "fields": {"app_label": "account", "model": "emailconfirmation"}}, {"model": "contenttypes.contenttype", "pk": 16, "fields": {"app_label": "socialaccount", "model": "socialaccount"}}, {"model": "contenttypes.contenttype", "pk": 17, "fields": {"app_label": "socialaccount", "model": "socialapp"}}, {"model": "contenttypes.contenttype", "pk": 18, "fields": {"app_label": "socialaccount", "model": "socialtoken"}}, {"model": "sessions.session", "pk": "1xu414ygz0niu2orj59i4bddlj9547sz", "fields": {"session_data": ".eJxVjEEOwiAQRe_C2pAw2AIu3XsGMjAzUjWQlHbVeHdt0oVu_3vvbyriupS4dp7jROqijDr9bgnzk-sO6IH13nRudZmnpHdFH7TrWyN-XQ_376BgL98ajMUhWPSYDRiSPAbgZOQslEefiewgAt4xsBVDJAwBk3dgvWeXQL0__vc4zA:1mcPxZ:tAbqqYKNqkHT4d4Gqu1q5JhcpoTnhgvb9iNZl6N3NRI", "expire_date": "2021-11-01T10:33:37.353Z"}}, {"model": "users.user", "pk": 1, "fields": {"password": "pbkdf2_sha256$260000$TrciDkeEVh7QAuBVjnis9e$QAFXowyTV/w/HFTAbOPI5uXp+Je71tYURLCFVUXnHas=", "email": "admin@senawfm.com", "name": null, "is_staff": true, "is_superuser": true, "is_active": true, "last_login": "2021-10-18T10:33:37.351Z", "date_joined": "2021-10-18T10:32:08.624Z", "groups": [], "user_permissions": []}}, {"model": "users.user", "pk": 2, "fields": {"password": "pbkdf2_sha256$260000$kpPrYJydi5wzWXBpUueZPQ$0+3zF3f+16nnA3kdrlI1kIP/dyFxJkOwuxIC44E1R3s=", "email": "santhosh.ck@senawfm.com", "name": "Santhosh C K", "is_staff": false, "is_superuser": false, "is_active": true, "last_login": "2021-10-18T10:39:51.826Z", "date_joined": "2021-10-18T10:39:51.914Z", "groups": [], "user_permissions": []}}, {"model": "sites.site", "pk": 1, "fields": {"domain": "example.com", "name": "example.com"}}]
+[
+    {
+        "model": "organization.organization",
+        "pk": 1,
+        "fields": {
+            "org_id": "sena",
+            "org_name": "SenaWFM",
+            "comments": "",
+            "is_active": true,
+            "created": "2021-10-18T10:34:15.772Z",
+            "modified": "2021-10-18T10:34:15.772Z"
+        }
+    },
+    {
+        "model": "organization.historicalemployee",
+        "pk": 1,
+        "fields": {
+            "id": 1,
+            "employee_id": "SENA001",
+            "full_name": "Santhosh C K",
+            "entry_date": "2021-10-18",
+            "exit_date": null,
+            "email": "santhosh.ck@senawfm.com",
+            "hours_per_week": 20,
+            "sex": null,
+            "comments": "",
+            "is_active": true,
+            "is_org_admin": true,
+            "created": "2021-10-18T10:39:51.926Z",
+            "modified": "2021-10-18T10:39:51.926Z",
+            "category": 1,
+            "job_grade": 4,
+            "supervisor": null,
+            "org": 1,
+            "org_unit": 2,
+            "user": 2,
+            "history_date": "2021-10-18T10:39:51.926Z",
+            "history_change_reason": null,
+            "history_type": "+",
+            "history_user": 1
+        }
+    },
+    {
+        "model": "organization.historicalemployee",
+        "pk": 2,
+        "fields": {
+            "id": 1,
+            "employee_id": "SENA001",
+            "full_name": "Santhosh C K",
+            "entry_date": "2021-10-18",
+            "exit_date": null,
+            "email": "santhosh.ck@senawfm.com",
+            "hours_per_week": 20,
+            "sex": null,
+            "comments": "",
+            "is_active": true,
+            "is_org_admin": true,
+            "created": "2021-10-18T10:39:51.926Z",
+            "modified": "2021-10-18T10:40:29.933Z",
+            "category": 1,
+            "job_grade": 4,
+            "supervisor": 1,
+            "org": 1,
+            "org_unit": 2,
+            "user": 2,
+            "history_date": "2021-10-18T10:40:29.935Z",
+            "history_change_reason": null,
+            "history_type": "~",
+            "history_user": 1
+        }
+    },
+    {
+        "model": "organization.historicalemployee",
+        "pk": 3,
+        "fields": {
+            "id": 2,
+            "employee_id": "SENA002",
+            "full_name": "Saurav Santhosh",
+            "entry_date": "2021-10-18",
+            "exit_date": null,
+            "email": null,
+            "hours_per_week": 40,
+            "sex": "M",
+            "comments": "",
+            "is_active": true,
+            "is_org_admin": false,
+            "created": "2021-10-18T10:41:17.280Z",
+            "modified": "2021-10-18T10:41:17.280Z",
+            "category": 1,
+            "job_grade": 3,
+            "supervisor": null,
+            "org": 1,
+            "org_unit": 1,
+            "user": null,
+            "history_date": "2021-10-18T10:41:17.281Z",
+            "history_change_reason": null,
+            "history_type": "+",
+            "history_user": 1
+        }
+    },
+    {
+        "model": "organization.employee",
+        "pk": 1,
+        "fields": {
+            "employee_id": "SENA001",
+            "full_name": "Santhosh C K",
+            "category": 1,
+            "job_grade": 4,
+            "entry_date": "2021-10-18",
+            "exit_date": null,
+            "email": "santhosh.ck@senawfm.com",
+            "supervisor": 1,
+            "org": 1,
+            "org_unit": 2,
+            "hours_per_week": 20,
+            "sex": null,
+            "comments": "",
+            "is_active": true,
+            "is_org_admin": true,
+            "user": 2,
+            "created": "2021-10-18T10:39:51.926Z",
+            "modified": "2021-10-18T10:40:29.933Z"
+        }
+    },
+    {
+        "model": "organization.employee",
+        "pk": 2,
+        "fields": {
+            "employee_id": "SENA002",
+            "full_name": "Saurav Santhosh",
+            "category": 1,
+            "job_grade": 3,
+            "entry_date": "2021-10-18",
+            "exit_date": null,
+            "email": null,
+            "supervisor": null,
+            "org": 1,
+            "org_unit": 1,
+            "hours_per_week": 40,
+            "sex": "M",
+            "comments": "",
+            "is_active": true,
+            "is_org_admin": false,
+            "user": null,
+            "created": "2021-10-18T10:41:17.280Z",
+            "modified": "2021-10-18T10:41:17.280Z"
+        }
+    },
+    {
+        "model": "organization.historicalorgunit",
+        "pk": 1,
+        "fields": {
+            "id": 1,
+            "ou_id": "RnD",
+            "ou_name": "R & D",
+            "comments": "",
+            "is_active": true,
+            "created": "2021-10-18T10:34:56.107Z",
+            "modified": "2021-10-18T10:34:56.107Z",
+            "manager": null,
+            "delegate": null,
+            "parent_ou": null,
+            "history_date": "2021-10-18T10:34:56.108Z",
+            "history_change_reason": null,
+            "history_type": "+",
+            "history_user": 1
+        }
+    },
+    {
+        "model": "organization.historicalorgunit",
+        "pk": 2,
+        "fields": {
+            "id": 2,
+            "ou_id": "CEO",
+            "ou_name": "CEO",
+            "comments": "",
+            "is_active": true,
+            "created": "2021-10-18T10:35:26.864Z",
+            "modified": "2021-10-18T10:35:26.864Z",
+            "manager": null,
+            "delegate": null,
+            "parent_ou": null,
+            "history_date": "2021-10-18T10:35:26.865Z",
+            "history_change_reason": null,
+            "history_type": "+",
+            "history_user": 1
+        }
+    },
+    {
+        "model": "organization.orgunit",
+        "pk": 1,
+        "fields": {
+            "ou_id": "RnD",
+            "ou_name": "R & D",
+            "manager": null,
+            "delegate": null,
+            "parent_ou": null,
+            "comments": "",
+            "is_active": true,
+            "created": "2021-10-18T10:34:56.107Z",
+            "modified": "2021-10-18T10:34:56.107Z"
+        }
+    },
+    {
+        "model": "organization.orgunit",
+        "pk": 2,
+        "fields": {
+            "ou_id": "CEO",
+            "ou_name": "CEO",
+            "manager": null,
+            "delegate": null,
+            "parent_ou": null,
+            "comments": "",
+            "is_active": true,
+            "created": "2021-10-18T10:35:26.864Z",
+            "modified": "2021-10-18T10:35:26.864Z"
+        }
+    },
+    {
+        "model": "organization.orgdesign",
+        "pk": 1,
+        "fields": {
+            "field": "EC",
+            "value": "Permanent",
+            "remarks": null
+        }
+    },
+    {
+        "model": "organization.orgdesign",
+        "pk": 2,
+        "fields": {
+            "field": "EC",
+            "value": "Temporary",
+            "remarks": null
+        }
+    },
+    {
+        "model": "organization.orgdesign",
+        "pk": 3,
+        "fields": {
+            "field": "JG",
+            "value": "JG-1",
+            "remarks": null
+        }
+    },
+    {
+        "model": "organization.orgdesign",
+        "pk": 4,
+        "fields": {
+            "field": "JG",
+            "value": "JG-2",
+            "remarks": null
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 1,
+        "fields": {
+            "action_time": "2021-10-18T10:34:15.773Z",
+            "user": 1,
+            "content_type": 2,
+            "object_id": "1",
+            "object_repr": "sena:SenaWFM",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 2,
+        "fields": {
+            "action_time": "2021-10-18T10:34:56.110Z",
+            "user": 1,
+            "content_type": 3,
+            "object_id": "1",
+            "object_repr": "R & D",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 3,
+        "fields": {
+            "action_time": "2021-10-18T10:35:26.868Z",
+            "user": 1,
+            "content_type": 3,
+            "object_id": "2",
+            "object_repr": "CEO",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 4,
+        "fields": {
+            "action_time": "2021-10-18T10:36:29.607Z",
+            "user": 1,
+            "content_type": 4,
+            "object_id": "1",
+            "object_repr": "Permanent",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 5,
+        "fields": {
+            "action_time": "2021-10-18T10:36:39.401Z",
+            "user": 1,
+            "content_type": 4,
+            "object_id": "2",
+            "object_repr": "Temporary",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 6,
+        "fields": {
+            "action_time": "2021-10-18T10:36:52.464Z",
+            "user": 1,
+            "content_type": 4,
+            "object_id": "3",
+            "object_repr": "JG-1",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 7,
+        "fields": {
+            "action_time": "2021-10-18T10:36:59.411Z",
+            "user": 1,
+            "content_type": 4,
+            "object_id": "4",
+            "object_repr": "JG-2",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 8,
+        "fields": {
+            "action_time": "2021-10-18T10:39:51.928Z",
+            "user": 1,
+            "content_type": 1,
+            "object_id": "1",
+            "object_repr": "Santhosh C K",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 9,
+        "fields": {
+            "action_time": "2021-10-18T10:40:29.938Z",
+            "user": 1,
+            "content_type": 1,
+            "object_id": "1",
+            "object_repr": "Santhosh C K",
+            "action_flag": 2,
+            "change_message": "[{\"changed\": {\"fields\": [\"Supervisor\"]}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 10,
+        "fields": {
+            "action_time": "2021-10-18T10:41:17.285Z",
+            "user": 1,
+            "content_type": 1,
+            "object_id": "2",
+            "object_repr": "Saurav Santhosh",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 1,
+        "fields": {
+            "name": "Can add employee",
+            "content_type": 1,
+            "codename": "add_employee"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 2,
+        "fields": {
+            "name": "Can change employee",
+            "content_type": 1,
+            "codename": "change_employee"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 3,
+        "fields": {
+            "name": "Can delete employee",
+            "content_type": 1,
+            "codename": "delete_employee"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 4,
+        "fields": {
+            "name": "Can view employee",
+            "content_type": 1,
+            "codename": "view_employee"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 5,
+        "fields": {
+            "name": "Can add organization",
+            "content_type": 2,
+            "codename": "add_organization"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 6,
+        "fields": {
+            "name": "Can change organization",
+            "content_type": 2,
+            "codename": "change_organization"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 7,
+        "fields": {
+            "name": "Can delete organization",
+            "content_type": 2,
+            "codename": "delete_organization"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 8,
+        "fields": {
+            "name": "Can view organization",
+            "content_type": 2,
+            "codename": "view_organization"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 9,
+        "fields": {
+            "name": "Can add org unit",
+            "content_type": 3,
+            "codename": "add_orgunit"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 10,
+        "fields": {
+            "name": "Can change org unit",
+            "content_type": 3,
+            "codename": "change_orgunit"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 11,
+        "fields": {
+            "name": "Can delete org unit",
+            "content_type": 3,
+            "codename": "delete_orgunit"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 12,
+        "fields": {
+            "name": "Can view org unit",
+            "content_type": 3,
+            "codename": "view_orgunit"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 13,
+        "fields": {
+            "name": "Can add org design",
+            "content_type": 4,
+            "codename": "add_orgdesign"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 14,
+        "fields": {
+            "name": "Can change org design",
+            "content_type": 4,
+            "codename": "change_orgdesign"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 15,
+        "fields": {
+            "name": "Can delete org design",
+            "content_type": 4,
+            "codename": "delete_orgdesign"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 16,
+        "fields": {
+            "name": "Can view org design",
+            "content_type": 4,
+            "codename": "view_orgdesign"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 17,
+        "fields": {
+            "name": "Can add historical org unit",
+            "content_type": 5,
+            "codename": "add_historicalorgunit"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 18,
+        "fields": {
+            "name": "Can change historical org unit",
+            "content_type": 5,
+            "codename": "change_historicalorgunit"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 19,
+        "fields": {
+            "name": "Can delete historical org unit",
+            "content_type": 5,
+            "codename": "delete_historicalorgunit"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 20,
+        "fields": {
+            "name": "Can view historical org unit",
+            "content_type": 5,
+            "codename": "view_historicalorgunit"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 21,
+        "fields": {
+            "name": "Can add historical employee",
+            "content_type": 6,
+            "codename": "add_historicalemployee"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 22,
+        "fields": {
+            "name": "Can change historical employee",
+            "content_type": 6,
+            "codename": "change_historicalemployee"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 23,
+        "fields": {
+            "name": "Can delete historical employee",
+            "content_type": 6,
+            "codename": "delete_historicalemployee"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 24,
+        "fields": {
+            "name": "Can view historical employee",
+            "content_type": 6,
+            "codename": "view_historicalemployee"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 25,
+        "fields": {
+            "name": "Can add log entry",
+            "content_type": 7,
+            "codename": "add_logentry"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 26,
+        "fields": {
+            "name": "Can change log entry",
+            "content_type": 7,
+            "codename": "change_logentry"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 27,
+        "fields": {
+            "name": "Can delete log entry",
+            "content_type": 7,
+            "codename": "delete_logentry"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 28,
+        "fields": {
+            "name": "Can view log entry",
+            "content_type": 7,
+            "codename": "view_logentry"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 29,
+        "fields": {
+            "name": "Can add permission",
+            "content_type": 8,
+            "codename": "add_permission"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 30,
+        "fields": {
+            "name": "Can change permission",
+            "content_type": 8,
+            "codename": "change_permission"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 31,
+        "fields": {
+            "name": "Can delete permission",
+            "content_type": 8,
+            "codename": "delete_permission"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 32,
+        "fields": {
+            "name": "Can view permission",
+            "content_type": 8,
+            "codename": "view_permission"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 33,
+        "fields": {
+            "name": "Can add group",
+            "content_type": 9,
+            "codename": "add_group"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 34,
+        "fields": {
+            "name": "Can change group",
+            "content_type": 9,
+            "codename": "change_group"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 35,
+        "fields": {
+            "name": "Can delete group",
+            "content_type": 9,
+            "codename": "delete_group"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 36,
+        "fields": {
+            "name": "Can view group",
+            "content_type": 9,
+            "codename": "view_group"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 37,
+        "fields": {
+            "name": "Can add content type",
+            "content_type": 10,
+            "codename": "add_contenttype"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 38,
+        "fields": {
+            "name": "Can change content type",
+            "content_type": 10,
+            "codename": "change_contenttype"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 39,
+        "fields": {
+            "name": "Can delete content type",
+            "content_type": 10,
+            "codename": "delete_contenttype"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 40,
+        "fields": {
+            "name": "Can view content type",
+            "content_type": 10,
+            "codename": "view_contenttype"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 41,
+        "fields": {
+            "name": "Can add session",
+            "content_type": 11,
+            "codename": "add_session"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 42,
+        "fields": {
+            "name": "Can change session",
+            "content_type": 11,
+            "codename": "change_session"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 43,
+        "fields": {
+            "name": "Can delete session",
+            "content_type": 11,
+            "codename": "delete_session"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 44,
+        "fields": {
+            "name": "Can view session",
+            "content_type": 11,
+            "codename": "view_session"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 45,
+        "fields": {
+            "name": "Can add user",
+            "content_type": 12,
+            "codename": "add_user"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 46,
+        "fields": {
+            "name": "Can change user",
+            "content_type": 12,
+            "codename": "change_user"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 47,
+        "fields": {
+            "name": "Can delete user",
+            "content_type": 12,
+            "codename": "delete_user"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 48,
+        "fields": {
+            "name": "Can view user",
+            "content_type": 12,
+            "codename": "view_user"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 49,
+        "fields": {
+            "name": "Can add site",
+            "content_type": 13,
+            "codename": "add_site"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 50,
+        "fields": {
+            "name": "Can change site",
+            "content_type": 13,
+            "codename": "change_site"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 51,
+        "fields": {
+            "name": "Can delete site",
+            "content_type": 13,
+            "codename": "delete_site"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 52,
+        "fields": {
+            "name": "Can view site",
+            "content_type": 13,
+            "codename": "view_site"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 53,
+        "fields": {
+            "name": "Can add email address",
+            "content_type": 14,
+            "codename": "add_emailaddress"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 54,
+        "fields": {
+            "name": "Can change email address",
+            "content_type": 14,
+            "codename": "change_emailaddress"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 55,
+        "fields": {
+            "name": "Can delete email address",
+            "content_type": 14,
+            "codename": "delete_emailaddress"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 56,
+        "fields": {
+            "name": "Can view email address",
+            "content_type": 14,
+            "codename": "view_emailaddress"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 57,
+        "fields": {
+            "name": "Can add email confirmation",
+            "content_type": 15,
+            "codename": "add_emailconfirmation"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 58,
+        "fields": {
+            "name": "Can change email confirmation",
+            "content_type": 15,
+            "codename": "change_emailconfirmation"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 59,
+        "fields": {
+            "name": "Can delete email confirmation",
+            "content_type": 15,
+            "codename": "delete_emailconfirmation"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 60,
+        "fields": {
+            "name": "Can view email confirmation",
+            "content_type": 15,
+            "codename": "view_emailconfirmation"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 61,
+        "fields": {
+            "name": "Can add social account",
+            "content_type": 16,
+            "codename": "add_socialaccount"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 62,
+        "fields": {
+            "name": "Can change social account",
+            "content_type": 16,
+            "codename": "change_socialaccount"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 63,
+        "fields": {
+            "name": "Can delete social account",
+            "content_type": 16,
+            "codename": "delete_socialaccount"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 64,
+        "fields": {
+            "name": "Can view social account",
+            "content_type": 16,
+            "codename": "view_socialaccount"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 65,
+        "fields": {
+            "name": "Can add social application",
+            "content_type": 17,
+            "codename": "add_socialapp"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 66,
+        "fields": {
+            "name": "Can change social application",
+            "content_type": 17,
+            "codename": "change_socialapp"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 67,
+        "fields": {
+            "name": "Can delete social application",
+            "content_type": 17,
+            "codename": "delete_socialapp"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 68,
+        "fields": {
+            "name": "Can view social application",
+            "content_type": 17,
+            "codename": "view_socialapp"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 69,
+        "fields": {
+            "name": "Can add social application token",
+            "content_type": 18,
+            "codename": "add_socialtoken"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 70,
+        "fields": {
+            "name": "Can change social application token",
+            "content_type": 18,
+            "codename": "change_socialtoken"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 71,
+        "fields": {
+            "name": "Can delete social application token",
+            "content_type": 18,
+            "codename": "delete_socialtoken"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 72,
+        "fields": {
+            "name": "Can view social application token",
+            "content_type": 18,
+            "codename": "view_socialtoken"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 1,
+        "fields": {
+            "app_label": "organization",
+            "model": "employee"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 2,
+        "fields": {
+            "app_label": "organization",
+            "model": "organization"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 3,
+        "fields": {
+            "app_label": "organization",
+            "model": "orgunit"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 4,
+        "fields": {
+            "app_label": "organization",
+            "model": "orgdesign"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 5,
+        "fields": {
+            "app_label": "organization",
+            "model": "historicalorgunit"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 6,
+        "fields": {
+            "app_label": "organization",
+            "model": "historicalemployee"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 7,
+        "fields": {
+            "app_label": "admin",
+            "model": "logentry"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 8,
+        "fields": {
+            "app_label": "auth",
+            "model": "permission"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 9,
+        "fields": {
+            "app_label": "auth",
+            "model": "group"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 10,
+        "fields": {
+            "app_label": "contenttypes",
+            "model": "contenttype"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 11,
+        "fields": {
+            "app_label": "sessions",
+            "model": "session"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 12,
+        "fields": {
+            "app_label": "users",
+            "model": "user"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 13,
+        "fields": {
+            "app_label": "sites",
+            "model": "site"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 14,
+        "fields": {
+            "app_label": "account",
+            "model": "emailaddress"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 15,
+        "fields": {
+            "app_label": "account",
+            "model": "emailconfirmation"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 16,
+        "fields": {
+            "app_label": "socialaccount",
+            "model": "socialaccount"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 17,
+        "fields": {
+            "app_label": "socialaccount",
+            "model": "socialapp"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 18,
+        "fields": {
+            "app_label": "socialaccount",
+            "model": "socialtoken"
+        }
+    },
+    {
+        "model": "sessions.session",
+        "pk": "1xu414ygz0niu2orj59i4bddlj9547sz",
+        "fields": {
+            "session_data": ".eJxVjEEOwiAQRe_C2pAw2AIu3XsGMjAzUjWQlHbVeHdt0oVu_3vvbyriupS4dp7jROqijDr9bgnzk-sO6IH13nRudZmnpHdFH7TrWyN-XQ_376BgL98ajMUhWPSYDRiSPAbgZOQslEefiewgAt4xsBVDJAwBk3dgvWeXQL0__vc4zA:1mcPxZ:tAbqqYKNqkHT4d4Gqu1q5JhcpoTnhgvb9iNZl6N3NRI",
+            "expire_date": "2021-11-01T10:33:37.353Z"
+        }
+    },
+    {
+        "model": "users.user",
+        "pk": 1,
+        "fields": {
+            "password": "pbkdf2_sha256$260000$TrciDkeEVh7QAuBVjnis9e$QAFXowyTV/w/HFTAbOPI5uXp+Je71tYURLCFVUXnHas=",
+            "email": "admin@senawfm.com",
+            "name": null,
+            "is_staff": true,
+            "is_superuser": true,
+            "is_active": true,
+            "last_login": "2021-10-18T10:33:37.351Z",
+            "date_joined": "2021-10-18T10:32:08.624Z",
+            "groups": [],
+            "user_permissions": []
+        }
+    },
+    {
+        "model": "users.user",
+        "pk": 2,
+        "fields": {
+            "password": "pbkdf2_sha256$260000$kpPrYJydi5wzWXBpUueZPQ$0+3zF3f+16nnA3kdrlI1kIP/dyFxJkOwuxIC44E1R3s=",
+            "email": "santhosh.ck@senawfm.com",
+            "name": "Santhosh C K",
+            "is_staff": false,
+            "is_superuser": false,
+            "is_active": true,
+            "last_login": "2021-10-18T10:39:51.826Z",
+            "date_joined": "2021-10-18T10:39:51.914Z",
+            "groups": [],
+            "user_permissions": []
+        }
+    },
+    {
+        "model": "sites.site",
+        "pk": 1,
+        "fields": {
+            "domain": "example.com",
+            "name": "example.com"
+        }
+    }
+]
