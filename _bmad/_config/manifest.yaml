@@ -1,0 +1,44 @@
+installation:
+  version: 6.2.0
+  installDate: 2026-03-19T17:23:28.416Z
+  lastUpdated: 2026-03-19T17:23:28.416Z
+modules:
+  - name: core
+    version: 6.2.0
+    installDate: 2026-03-19T17:23:27.746Z
+    lastUpdated: 2026-03-19T17:23:27.746Z
+    source: built-in
+    npmPackage: null
+    repoUrl: null
+  - name: bmm
+    version: 6.2.0
+    installDate: 2026-03-19T17:23:16.366Z
+    lastUpdated: 2026-03-19T17:23:27.746Z
+    source: built-in
+    npmPackage: null
+    repoUrl: null
+  - name: bmb
+    version: 1.1.0
+    installDate: 2026-03-19T17:23:18.978Z
+    lastUpdated: 2026-03-19T17:23:28.025Z
+    source: external
+    npmPackage: bmad-builder
+    repoUrl: https://github.com/bmad-code-org/bmad-builder
+  - name: tea
+    version: 1.7.0
+    installDate: 2026-03-19T17:23:20.565Z
+    lastUpdated: 2026-03-19T17:23:28.210Z
+    source: external
+    npmPackage: bmad-method-test-architecture-enterprise
+    repoUrl: https://github.com/bmad-code-org/bmad-method-test-architecture-enterprise
+  - name: wds
+    version: 0.3.0
+    installDate: 2026-03-19T17:23:23.256Z
+    lastUpdated: 2026-03-19T17:23:28.416Z
+    source: external
+    npmPackage: bmad-method-wds-expansion
+    repoUrl: https://github.com/bmad-code-org/bmad-method-wds-expansion
+ides:
+  - antigravity
+  - github-copilot
+  - gemini
