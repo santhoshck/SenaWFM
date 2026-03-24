@@ -1,7 +1,10 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+from .routers import admin
 
 app = FastAPI(title="SenaWFM API", version="0.1.0")
+
+app.include_router(admin.router)
 
 app.add_middleware(
     CORSMiddleware,
