@@ -1,10 +1,11 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from .routers import admin
+from .routers import admin, auth
 
 app = FastAPI(title="SenaWFM API", version="0.1.0")
 
 app.include_router(admin.router)
+app.include_router(auth.router, prefix="/api/v1/auth", tags=["auth"])
 
 app.add_middleware(
     CORSMiddleware,
